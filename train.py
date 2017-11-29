@@ -33,7 +33,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     t.set_num_threads(args.num_threads)
-    loader = Dataloader('/Users/daniil/projects/functional-enigma/utils/data/', '~/projects/wiki.ru.bin')
+    loader = Dataloader('~/projects/functional-enigma/utils/data/', '~/projects/wiki.en.bin')
 
     transformer = Transormer(loader.vocab_size, 8, 14, 300, 45, 45, dropout=args.dropout)
     embed = PositionalEmbedding(loader.preprocessed_embeddings, loader.vocab_size, 125, 300)
