@@ -70,7 +70,7 @@ if __name__ == "__main__":
             print('_________')
             print(' '.join([loader.idx_to_word[idx] for idx in target[0].cpu().data.numpy()]))
             print('_________')
-            print(transformer.generate(input, loader, embed, args.use_cuda))
+            print(transformer.generate(input, loader, embed, args.use_cuda, n_beams=3))
             print('_________')
 
         if (i + 1) % 5000 == 0:
